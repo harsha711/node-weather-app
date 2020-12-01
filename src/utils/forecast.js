@@ -11,7 +11,13 @@ const forecast = (lat, lon, callback) => {
             callback('Inavlid Input, search for different location', undefined);
         }
         else{
-            callback(undefined, 'The temperature in '+body.name + ' is '+body.main.temp);
+            callback(undefined, {
+                city: body.name,
+                temp: body.main.temp,
+                temp_min: body.main.temp_min,
+                temp_max: body.main.temp_max,
+                description: body.weather[0].description
+            });
         }
     })
 }
