@@ -35,13 +35,15 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about',{
-        title: "About"
+        title: "About",
+        name: 'Harsha'
     });
 })
 
 app.get('/help', (req, res) => {
     res.render('help',{
-        title: "Help"
+        title: "Help",
+        name: 'Harsha'
     })
 })
 
